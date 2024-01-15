@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sls2wsgi"
+requires-python = ">=3.8"
+version = "0.1.0"
+dependencies = [
+    "Werkzeug >= 3.0.1",
+    "PyYAML >= 6.0.1",
+]
+
+[project.scripts]
+sls2wsgi = "sls2wsgi.dev_server:run"
+
+[tool.ruff]
+src = ["src"]
+fix = false
+show-fixes = true
+show-source = true
